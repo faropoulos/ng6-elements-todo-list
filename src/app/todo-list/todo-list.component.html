@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>My Todo List</span>
+    <span *ngIf="todos.length > 0">({{ todoList.selectedOptions.selected.length }}/{{ todos.length }})</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <mat-form-field style="width: 100%;">
+      <input #inputText matInput placeholder="What needs to be done?"
+        [(ngModel)]="newText" (keydown.enter)="addTodo()">
+    </mat-form-field>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div id="todo-body">
+  <mat-selection-list #todoList style="margin-bottom: 10px;">
+    <mat-list-option *ngFor="let todo of todos"
+      checkboxPosition="before" [selected]="todo.done">
+      {{ todo.text }}
+    </mat-list-option>
+  </mat-selection-list>
+  <button mat-raised-button color="primary" (click)="clearList()">Clear List</button>
+</div>
