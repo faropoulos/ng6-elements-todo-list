@@ -1,6 +1,6 @@
 # elements-app
 
-#### This is a simple example of a Material Design Todo List using Angular 6's new feature Elements for education purposes only.
+#### This is a simple example of a Material Design Todo List using Angular 6's new feature Elements for education purposes only. By running `npm run build:elements`, you will be provided with the html and js files for your todo-list element.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.1.
 
